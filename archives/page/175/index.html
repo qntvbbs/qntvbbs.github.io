@@ -1,0 +1,1808 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <link rel="shortcut icon" href="https://qntvbbs.github.io//favicon.ico" type="image/x-icon" /><meta name="viewport"content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"/><meta name="apple-mobile-web-app-capable"content="yes"/><meta name="apple-mobile-web-app-status-bar-style"content="black"/><meta name="format-detection"content="telephone=no"/><meta name="renderer"content="webkit"><meta name="description"content="青柠博客空间记录生活点点滴滴！"><meta charset="UTF-8"><title>Archives | 青柠博客空间</title>
+<link href="https://qntvbbs.github.io//styles/main.css" type="text/css" rel="stylesheet" /><link href="https://at.alicdn.com/t/font_1621793_zatzzgvf30g.css" type="text/css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css"><script async src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/bsz.pure.mini.min.js"></script><script src="https://qntvbbs.github.io//media/js/magnify.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"></script>
+<script type="text/javascript">function btn_toggle(){document.getElementById("hn").classList.contains("no-js")?document.getElementById("hn").classList.remove("no-js"):document.getElementById("hn").classList.add("no-js")}</script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* 年份锚点占位，防 sticky 头部遮挡（如有） */
+    .year-anchor { position: relative; }
+    .year-anchor::before { content:""; display:block; height:80px; margin-top:-80px; visibility:hidden; }
+  </style>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 text-gray-800">
+  <header class="sticky top-0 z-50 bg-white/80 backdrop-blur shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <a href="https://qntvbbs.github.io/" class="flex items-center gap-2">
+        <img src="https://qntvbbs.github.io//images/avatar.png" alt="logo" class="w-10 h-10 rounded-full"/>
+        <h1 class="text-lg font-bold text-gray-900">青柠博客空间</h1>
+      </a>
+      
+    </div>
+
+    <!-- 菜单 -->
+    <nav class="hidden md:flex items-center gap-6">
+      
+        <a href="/" class="text-gray-700 hover:text-blue-600 font-medium">
+          首页
+        </a>
+      
+        <a href="/tags" class="text-gray-700 hover:text-blue-600 font-medium">
+          分类
+        </a>
+      
+        <a href="/archives" class="text-gray-700 hover:text-blue-600 font-medium">
+          归档
+        </a>
+      
+        <a href="/post/about" class="text-gray-700 hover:text-blue-600 font-medium">
+          关于
+        </a>
+      
+    </nav>
+
+<div class="flex items-center gap-4">
+  <!-- 桌面端：输入框 + 提交按钮 -->
+  <form action="/search/index.html" method="GET" class="hidden sm:block">
+    <div class="relative">
+      <input
+        type="search"
+        name="q"
+        placeholder="搜索..."
+        class="rounded-xl border border-gray-200 px-3 pr-12 py-1.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+      <!-- 提交按钮（内联 SVG，垂直居中） -->
+      <button
+        type="submit"
+        aria-label="搜索"
+        class="absolute right-1.5 top-1/2 -translate-y-1/2 grid place-items-center
+               h-8 w-8 rounded-md bg-blue-600 text-white hover:bg-blue-700
+               focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+  </form>
+
+  <!-- 移动端：独立搜索按钮 -->
+  <button class="sm:hidden" aria-label="打开搜索" onclick="location.href='/search/index.html'">
+    <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2"
+         stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="7"></circle>
+      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </button>
+
+<!-- 菜单按钮 -->
+<button
+  class="md:hidden"
+  type="button"
+  data-menu-btn
+  aria-controls="hn"
+  aria-expanded="false"
+>
+  <i class="iconfont icon-category text-xl"></i>
+</button>
+</div>
+</header>
+<!-- 遮罩 -->
+<div id="mobile-overlay" class="fixed inset-0 bg-black/30 hidden md:hidden z-40"></div>
+
+<!-- 移动端菜单：全宽，固定在头部下方 -->
+<nav id="hn" class="fixed inset-x-0 top-16 hidden md:hidden z-50 bg-white border-t border-gray-200 shadow-xl">
+  <div class="px-4 py-3 space-y-2">
+    
+      <a href="/" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">
+        首页
+      </a>
+    
+      <a href="/tags" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">
+        分类
+      </a>
+    
+      <a href="/archives" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">
+        归档
+      </a>
+    
+      <a href="/post/about" class="block py-2 text-gray-700 hover:text-blue-600 font-medium">
+        关于
+      </a>
+    
+    <form action="/search/index.html" class="pt-2">
+      <input type="text" name="q" placeholder="搜索..."
+        class="w-full rounded-xl border border-gray-200 px-3 py-2 text-sm focus:ring-2 focus:ring-blue-500"/>
+    </form>
+  </div>
+</nav>
+<script>
+(function(){
+  var btn = document.querySelector('[data-menu-btn]');
+  var panel = document.getElementById('hn');
+  var overlay = document.getElementById('mobile-overlay');
+  if (!btn || !panel || !overlay) return;
+
+  function open() {
+    panel.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+    btn.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden'; // 锁滚动
+  }
+  function close() {
+    panel.classList.add('hidden');
+    overlay.classList.add('hidden');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+  function toggle() { (panel.classList.contains('hidden') ? open() : close()); }
+
+  btn.addEventListener('click', toggle);
+  overlay.addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') close(); });
+  window.addEventListener('resize', function(){ if (window.innerWidth >= 768) close(); });
+})();
+</script>
+
+
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <!-- 顶部标题条 -->
+    <header class="mb-6">
+      <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-gray-900">归档</h1>
+      <p class="mt-1 text-gray-600 text-sm">按年份浏览历史文章</p>
+    </header>
+
+    <!-- 归档主体（单列：更易读；缩略图在左、文本在右） -->
+    <section class="space-y-10">
+      
+
+      
+        <div class="year-anchor" id="y-2025">
+          <!-- 年份标题 -->
+          <div class="flex items-end justify-between">
+            <h2 class="text-xl sm:text-2xl font-semibold text-gray-900">2025</h2>
+            <!-- 快捷返回顶部/跳转锚点（可选） -->
+            <a href="#top" class="hidden sm:inline text-sm text-gray-500 hover:text-blue-600">回到顶部</a>
+          </div>
+
+          <!-- 年份列表 -->
+          <div class="mt-4 space-y-3">
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/u1ilega17196/" class="flex gap-4">
+                  
+                    <img src="https://picx.zhimg.com/80/v2-6fa62ffd4889dde946347bd4a25f4afb_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《顾问》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>358字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/v2mlop2d7202/" class="flex gap-4">
+                  
+                    <img src="https://mms0.baidu.com/it/u=3216937841,2357081858&amp;fm=253&amp;app=138&amp;f=JPEG&amp;fmt=auto&amp;q=75?w=338&amp;h=500" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《费丽丝蒂 第一季~第三季》百度云网盘下载.阿里云盘.英语中字.(1998)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>318字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/w5esrrgm7201/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d923b12d7e12198251275b09c89.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《秦王李世民》百度云网盘下载.阿里云盘.国语中字.(2005)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>405字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/115xor1z7188/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5925375bf2c95c9fd7c37212036ab34b.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《青春创世纪》百度云网盘下载.阿里云盘.国语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>482字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/2kmoapmf7193/" class="flex gap-4">
+                  
+                    <img src="https://qimg.cdnmama.com/lp/2023/02/24/39d1476bbb564c2c8b7795ee1d177185.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《一级方程式：疾速争胜 第五季》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>115字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/exwdfqjf7189/" class="flex gap-4">
+                  
+                    <img src="https://picx.zhimg.com/80/v2-d1c057ff0777b5f4158c8660349ca0a9_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《鱿鱼游戏马来版》百度云网盘下载.阿里云盘.马来语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>229字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/fhchwmo47191/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/25bfd65153751bddd2be2a91aa2e4250f8f75.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《在你的冬夜里闪耀》百度云网盘下载.阿里云盘.国语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>347字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/ho51zxue7190/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d923e7aae7aaf7d317b0069ba03.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《DA师》百度云网盘下载.阿里云盘.国语中字.(2002)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>403字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/ii31p23i7192/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a38d32ff7cf3e8ae8fc425cf945f.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《猫胆虫威》百度云网盘下载.阿里云盘.英语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>366字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/mli2k4mw7195/" class="flex gap-4">
+                  
+                    <img src="https://pic4.zhimg.com/80/v2-b8a235caebfec729012e8497cb9912dd_720w.jpg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《尤金李维的宅老爹旅行 第一季》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>151字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/pldvnmff7194/" class="flex gap-4">
+                  
+                    <img src="https://mms1.baidu.com/it/u=193569197,4145454395&amp;fm=253&amp;app=120&amp;f=JPEG&amp;fmt=auto&amp;q=75?w=452&amp;h=676" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《危险关系》百度云网盘下载.阿里云盘.法语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>401字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/g1h2c40t7187/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad592e7a87ac9fd313928cde868989f8af.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《夸里》百度云网盘下载.阿里云盘.英语中字.(2016)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>513字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/mwpq3x5i7186/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d51bbe2a281eedb9b06e2a0dde6.jpg?imageView2/1/w/464/h/674" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《加油！金顺》百度云网盘下载.阿里云盘.韩语中字.(2005)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>455字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/nx5wgzyy7185/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d923e7aa7df57399bdbda2a1c16.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《神奇动物管理员 第一季~第三季》百度云网盘下载.阿里云盘.英语中字.(2004)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>421字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/psftqjkg7183/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5925370fa16bd8d33be8d7fe33a07214.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《扑通扑通的青春》百度云网盘下载.阿里云盘.国语中字.(2019)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>355字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/rk3mt23x7181/" class="flex gap-4">
+                  
+                    <img src="https://pica.zhimg.com/80/v2-d86b3768f70e4cfd52858824cb402d46_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《全力挥杆：高尔夫大满贯之路》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>178字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/ubjjqszn7184/" class="flex gap-4">
+                  
+                    <img src="https://mms0.baidu.com/it/u=1936320941,2615107275&amp;fm=253&amp;app=138&amp;f=JPEG&amp;fmt=auto&amp;q=75?w=500&amp;h=761" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《烈火如歌》百度云网盘下载.阿里云盘.国语中字.(2018)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>602字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/zvxl2k0m7182/" class="flex gap-4">
+                  
+                    <img src="https://qimg.cdnmama.com/lp/2023/02/19/7dafd6587a5c496c80df7b9f7a8317e1.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《我是失物协寻师》百度云网盘下载.阿里云盘.泰语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>149字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/51h3on3j7174/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386bef2ab1287a9395ba420f4ff852406e.png?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《星际迷航：皮卡德 第三季》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>303字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/53bhbwxe7178/" class="flex gap-4">
+                  
+                    <img src="https://t.focus-img.cn/sh740wsh/bbs/p2/384a4cc7a38e6ffef4aab5f1830754e0.jpg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《野人老师》百度云网盘下载.阿里云盘.粤语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>379字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/5hbjm4ib7172/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a302f39dd51baace3fa8f0712a4b.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《恐怖绘本 1-5季》百度云网盘下载.阿里云盘.日语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>315字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/awbpgh3r7177/" class="flex gap-4">
+                  
+                    <img src="https://picx.zhimg.com/80/v2-6526502b6196f16e646f94ddc58674eb_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《死角》百度云网盘下载.阿里云盘.粤语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>72字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/cmzvhogw7175/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/25bfd602b122ff339e02ffa2b7dbf7b88703b.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《反起跑线联盟》百度云网盘下载.阿里云盘.粤语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>407字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/corsp0oz7171/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386be338923300b8077590fe7618b3ef33.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《下一站你的世界》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>329字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/ct2dmxds7173/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5925370fa9235b5355d6fb2ea269ea7c.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《星际迷航：皮卡德 第一季》百度云网盘下载.阿里云盘.英语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>355字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/gv0ktp1h7176/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a3c7e0faf339e6d21687797af26f.jpg?imageView2/1/w/464/h/674" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《时光音乐会》百度云网盘下载.阿里云盘.国语中字.(2021)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>308字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/hlpein327169/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386bec7e0fa395b7e12f75ecaad0f64913.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《不想恋爱的千小姐》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>351字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/kk0tmho37179/" class="flex gap-4">
+                  
+                    <img src="https://picx.zhimg.com/80/v2-d2603d9262d1f47d6bd980d781f9e316_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《À Table！~跟着古代食谱学做菜》百度云网盘下载.阿里云盘.日语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>206字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/krnckccv7180/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb73868d11e92302ff02ffa9934fe122e15ad.jpg?imageView2/1/w/464/h/674" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《半熟恋人 第二季》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>305字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/nhoqobxh7167/" class="flex gap-4">
+                  
+                    <img src="https://mms2.baidu.com/it/u=1238055642,1628446803&amp;fm=253&amp;app=138&amp;f=JPEG&amp;fmt=auto&amp;q=75?w=345&amp;h=500" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《胡迪尼》百度云网盘下载.阿里云盘.英语中字.(2014)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>524字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/q5juvima7168/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/25bfd6dd8ea339e19b0faf064902f27aef49a.jpg?imageView2/1/w/464/h/674" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《唐朝诡事录》百度云网盘下载.阿里下载.国语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>574字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/tdwpm40a7170/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386beddd0fa8077af33c04f4b4e9847d7e.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《我才不会喜欢你》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>393字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/11c2wgdy7158/" class="flex gap-4">
+                  
+                    <img src="https://oss.tan8.com/resource/attachment/2023/202302/7da15918c58c6034756b36d8aa4fde63.jpg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《3个审讯室 埼玉爱犬家连续杀人事件》百度云网盘下载.阿里云盘.日语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>313字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/33chtk4j7163/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/25bfd6ddc692ffddd2ddd24f25e84c40041da.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《傲娇与章经》百度云网盘下载.阿里云盘.粤语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>550字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/4j3iv40n7162/" class="flex gap-4">
+                  
+                    <img src="https://pica.zhimg.com/80/v2-939db630cd535c0a95229e353e738339_720w.jpeg" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《珍的不一样 第一季》百度云网盘下载.阿里云盘.英语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>338字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/aj0azic17166/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad592537923339e87a9ae4940c51f49ade.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《神勇武工队传奇》百度云网盘下载.阿里云盘.国语中字.(2017)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>358字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/heujapas7156/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a30e151ba07acbd1a567a44fa828.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《九流霸主》百度云网盘下载.阿里云盘.国语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>381字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/k2qupijx7160/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d9231789ecd844805381469ed99.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《恋爱时代 第一季~第四季》百度云网盘下载.阿里云盘.英语中字.(1998)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>546字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/kbxrkqnq7165/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb73868d7a351b8077af3396f35878d4b1873.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《耀眼的你啊》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>373字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/lit12mv27161/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a3f2a39dd5bf1f718ec24c0d469f.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《黑帮之境 1-2季》百度云网盘下载.阿里云盘.法语中字.(2021)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>196字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/mzie2pdz7157/" class="flex gap-4">
+                  
+                    <img src="https://mms0.baidu.com/it/u=63478573,1360644071&amp;fm=253&amp;app=138&amp;f=JPEG&amp;fmt=auto&amp;q=75?w=464&amp;h=644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《围城》百度云网盘下载.阿里云盘.国语中字.(1990)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>611字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/opyqodl37159/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a302f02ff281e83be7cff620056d.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《丼物委员长》百度云网盘下载.阿里云盘.日语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>230字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/zvzkdnsy7164/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386be8d3f2a300b39ddf8900837c37c778.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《公子贵姓》百度云网盘下载.阿里云盘.国语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>237字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/camfsflf7149/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d923cf3ef2aa0b0594b7d7a3102.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《冲破囚笼》百度云网盘下载.阿里云盘.英语中字.(2015)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>253字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/i1vpc20b7153/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad592537e7a9257ecd89bb43b42c50df61.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《亲爱的麻洋街》百度云网盘下载.阿里云盘.国语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>388字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/jnvrgww27155/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a302f395b281ee76bfa4e9d1155c.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《翩翩起舞 第一季》百度云网盘下载.阿里云盘.英语中字.(2020)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>172字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/lqcnvk5y7146/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/25bfd62f2ffb12f2aa281e521fbfa2b4bf4be.jpg?imageView2/1/w/464/h/674" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《月歌行》百度云网盘下载.阿里云盘.国语中字.(2022)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>312字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/mg4latgg7142/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/fb7386be338f2aaf3302ffe33679b8d49c9e8.png?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《她和她的航天员》百度云网盘下载.阿里云盘.波兰语中字.(2023)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>260字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/nxtq2inq7148/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad59206d923b8603ba3a975e9a18f523bb.jpg?imageView2/1/w/464/h/677" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《黑色乌托邦》百度云网盘下载.阿里云盘.英语中字.(2015)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>351字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+              <article class="group bg-white rounded-xl ring-1 ring-gray-100 hover:ring-gray-200 shadow-sm hover:shadow-md transition p-4">
+                <a href="https://qntvbbs.github.io/post/pf30mdon7151/" class="flex gap-4">
+                  
+                    <img src="https://p0.pipi.cn/mmdb/d2dad5927a30fa50c88d33e7bd9d44d82ad9f.jpg?imageView2/1/w/464/h/644" alt="thumb" loading="lazy"
+                         class="w-28 h-20 sm:w-32 sm:h-24 object-cover rounded-lg ring-1 ring-gray-100 flex-shrink-0"/>
+                  
+                  <div class="min-w-0">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-900 group-hover:text-blue-600 line-clamp-2">
+                      《奶油公社》百度云网盘下载.阿里云盘.英语中字.(2021)
+                    </h3>
+                    <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                      <span class="inline-flex items-center gap-1">
+                        <i class="iconfont icon-calendar"></i>2025-09-16
+                      </span>
+                      
+                        <span class="inline-flex items-center gap-1">
+                          <i class="iconfont icon-caret-down"></i>192字
+                        </span>
+                      
+                    </div>
+                    
+                      <div class="mt-2 flex flex-wrap gap-2">
+                        
+                          <a href="https://qntvbbs.github.io/tag/ooAjTk8ruB/" class="px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                             onclick="event.stopPropagation();">电视剧</a>
+                        
+                      </div>
+                    
+                  </div>
+                </a>
+              </article>
+            
+          </div>
+        </div>
+      
+    </section>
+
+    <!-- 分页 -->
+    <nav class="mt-10 flex items-center justify-between">
+      
+        <a href="https://qntvbbs.github.io/archives/page/174/"
+           class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 ring-1 ring-gray-200">
+          ← 上一页
+        </a>
+      
+
+      
+        <a href="https://qntvbbs.github.io/archives/page/176/"
+           class="inline-flex items-center gap-2 rounded-lg px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 ring-1 ring-gray-200">
+          下一页 →
+        </a>
+      
+    </nav>
+  </main>
+
+  <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a><div class="footer animated fadeInDown"><div class="site_footer"><div class="mysocials"><div class="my_socials"></div></div><div class="copyright"id="copyright">Powered by <a href="https://qn.wattlq.cn/" target="_blank">青柠资源网</a>Copyright © 2018-2020 <a href="https://qntvbbs.github.io/" style="margin:0;">青柠博客空间</a>.</div>
+<span style="display: inline;margin-right:15px;">👁<strong><span id="busuanzi_value_site_uv"></span></strong></span><span id="busuanzi_container_page_pv" style="display: inline;"><span>📚<strong>40657</strong> posts</span></div></div>
+<script>
+console.log("\n %c \u26a1Theme: Bitcron-pro Author's Blog:https://blog.blinkstar.cn  Writen By Serence  \n\n", "color: #ffffff; background: rgba(49, 49, 49, 0.85); padding:5px 0;border-radius:5px;", );
+</script>
+<script src="https://cdn.jsdelivr.net/npm/instant.page@3.0.0/instantpage.min.js" type="module" defer></script>
+</body>
+</html>

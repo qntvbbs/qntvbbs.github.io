@@ -1,0 +1,77 @@
+<%
+  // 结果数组字段兼容
+  var list = (typeof results !== 'undefined') ? results
+           : (typeof posts !== 'undefined') ? posts
+           : [];
+%>
+
+<% if (list && list.length) { %>
+  <ul class="divide-y divide-gray-100">
+    <% list.forEach(function(item){
+         var link    = item.link || item.url || '#';
+         var title   = item.title || '未命名';
+         var date    = item.dateFormat || item.date || '';
+         var words   = item.stats && item.stats.words;
+         var read    = item.stats && item.stats.text;
+         var feature = item.feature || item.cover || '';
+         var tags    = item.tags || [];
+    %>
+      <li>
+        <a href="<%= link %>" class="block px-0 py-4 hover:bg-gray-50 transition rounded-lg">
+          <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <% if (feature) { %>
+              <!-- 移动端：宽度100%、16:9；≥sm：小缩略图（与归档一致） -->
+              <img
+                src="<%= feature %>"
+                alt="thumb" loading="lazy"
+                class="w-full aspect-video object-cover rounded-lg ring-1 ring-gray-100
+                       sm:w-32 sm:h-24 sm:aspect-auto sm:object-cover flex-shrink-0"
+                sizes="(min-width: 640px) 8rem, 100vw"
+              />
+            <% } %>
+
+            <div class="min-w-0 flex-1">
+              <h2 class="text-base sm:text-lg font-semibold text-gray-900 line-clamp-2 hover:text-blue-600">
+                <%- title %>
+              </h2>
+
+              <div class="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-500">
+                <% if (date) { %>
+                  <span class="inline-flex items-center gap-1">
+                    <i class="iconfont icon-calendar"></i><%= date %>
+                  </span>
+                <% } %>
+                <% if (words) { %>
+                  <span class="inline-flex items-center gap-1">
+                    <i class="iconfont icon-caret-down"></i><%= words %>字
+                  </span>
+                <% } %>
+                <% if (read) { %>
+                  <span class="inline-flex items-center gap-1">
+                    <i class="iconfont icon-naozhong"></i><%= read %>
+                  </span>
+                <% } %>
+              </div>
+
+              <% if (item.abstract || item.excerpt || item.summary || item.content) { %>
+                <p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                  <%- (item.abstract || item.excerpt || item.summary || item.content) %>
+                </p>
+              <% } %>
+
+              <% if (tags && tags.length) { %>
+                <div class="mt-2 flex items-center gap-2 overflow-x-auto [-webkit-overflow-scrolling:touch]">
+                  <% tags.slice(0,6).forEach(function(t){ %>
+                    <a href="<%= t.link || ('/tags/' + (t.slug || t.name)) %>"
+                       class="whitespace-nowrap px-2 py-0.5 rounded-md bg-gray-100 text-gray-700 hover:bg-gray-200 text-[12px]"
+                       onclick="event.stopPropagation();"><%= t.name %></a>
+                  <% }) %>
+                </div>
+              <% } %>
+            </div>
+          </div>
+        </a>
+      </li>
+    <% }) %>
+  </ul>
+<% } %>
